@@ -20,10 +20,10 @@ app.use(forceSSL());
 
 // Run the app by serving the static files
 // in the dist directory
-app.use(express.static(__dirname + '/../dist/codergirl-app'));
+app.use(express.static('dist/codergirl-app'));
 
 app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname + '/../dist/codergirl-app/index.html'));
+  res.sendFile(path.join('dist/codergirl-app/index.html'));
 });
 
 // Start the app by listening on the default
